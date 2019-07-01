@@ -75,8 +75,19 @@
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+					 <groupId>org.apache.maven.plugins</groupId>
+      					<artifactId>maven-jar-plugin</artifactId>
+      					<executions>
+        				<execution>
+          				<id>make-a-war</id>
+          				<phase>compile</phase>
+          				<goals>
+           			 	<goal>war</goal>
+          				</goals>
+        				</execution>
+      					</executions>
 			</plugin>
+	
 		</plugins>
 	</build>
 
